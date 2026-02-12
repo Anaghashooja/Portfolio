@@ -1,4 +1,4 @@
-import { Github, Linkedin, FolderCode, Check, Copy, Mail, ExternalLink, Code2, Briefcase, Users, Terminal, ShoppingCart, Sparkles } from 'lucide-react';
+import { Github, Linkedin, FolderCode, Check, Copy, Mail, ExternalLink, Code2, Briefcase, Users, Terminal, ShoppingCart, Sparkles, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
@@ -53,21 +53,19 @@ const App = () => {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-3xl"
           >
-            <h2 className="text-blue-600 font-semibold mb-4 flex items-center gap-2">
-              <Terminal size={20} /> Hello World, I'm a Developer
-            </h2>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
-              Building the future of web at <span className="text-slate-400">Technopark.</span>
-            </h1>
+           <h2 className="text-blue-600 font-semibold mb-4 flex items-center gap-2">
+  <Terminal size={20} /> Turning complex logic into elegant code.
+</h2>
+           <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-[1.1]">
+  I build <span className="text-slate-400">robust web systems.</span>
+</h1>
             <p className="text-xl text-slate-600 mb-8 leading-relaxed">
               Currently a <span className="font-semibold text-slate-900">React Developer at RelaxPlzz Technologies</span> and a 
-              <span className="font-semibold text-slate-900"> MERN Stack Intern at Srishti Innovative.</span> I bridge the gap between complex backend logic and pixel-perfect frontends.
+              <span className="font-semibold text-slate-900"> MERN Stack Intern at Srishti Innovative.</span> I specialize in building robust full-stack applications with a focus on performance and type-safety.
             </p>
             
             <div className="flex flex-wrap gap-4 items-center">
-              <a href="www.linkedin.com/in/
-anagha-s-0b8542359
-" target="_blank" rel="noreferrer" className="p-3 bg-white border border-slate-200 rounded-xl hover:shadow-lg hover:border-blue-500 transition text-slate-600 hover:text-blue-600">
+              <a href="https://www.linkedin.com/in/anagha-s-0b8542359" target="_blank" rel="noreferrer" className="p-3 bg-white border border-slate-200 rounded-xl hover:shadow-lg hover:border-blue-500 transition text-slate-600 hover:text-blue-600">
                 <Linkedin size={24} />
               </a>
               <a href="https://github.com/Anaghashooja" target="_blank" rel="noreferrer" className="p-3 bg-white border border-slate-200 rounded-xl hover:shadow-lg hover:border-slate-900 transition text-slate-600 hover:text-slate-900">
@@ -96,21 +94,23 @@ anagha-s-0b8542359
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-sm font-bold">
-              <Sparkles size={16} /> My Philosophy
+              <Sparkles size={16} /> Engineering Excellence
             </div>
-            <h3 className="text-3xl font-bold text-slate-800 italic">"Scaling user experiences from the heart of Technopark."</h3>
+            <h3 className="text-3xl font-bold text-slate-800 italic">"Turning complex logic into seamless human experiences."</h3>
             <p className="text-lg text-slate-600 leading-relaxed">
-              I thrive in the unique intersection of large-scale corporate development and fast-paced intern learning. My daily workflow involves balancing <strong>TypeScript safety</strong> with <strong>MERN stack flexibility</strong>.
+              I focus on writing clean, maintainable code that scales. Whether it's managing complex state in <strong>React</strong> or designing efficient schemas in <strong>MongoDB</strong>, my goal is always to build software that lasts.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div className="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm">
-              <h4 className="text-4xl font-extrabold text-blue-600 mb-1">2025</h4>
-              <p className="text-slate-500 text-sm font-bold uppercase tracking-wider">Active Year</p>
+              <div className="text-blue-600 mb-2"><Zap size={24} /></div>
+              <h4 className="text-xl font-bold text-slate-900">Performance</h4>
+              <p className="text-slate-500 text-sm">Optimized rendering and load times.</p>
             </div>
             <div className="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm">
-              <h4 className="text-4xl font-extrabold text-indigo-600 mb-1">MERN</h4>
-              <p className="text-slate-500 text-sm font-bold uppercase tracking-wider">Expertise</p>
+              <div className="text-indigo-600 mb-2"><Code2 size={24} /></div>
+              <h4 className="text-xl font-bold text-slate-900">Type Safety</h4>
+              <p className="text-slate-500 text-sm">Robust code with TypeScript.</p>
             </div>
           </div>
         </div>
@@ -120,36 +120,36 @@ anagha-s-0b8542359
       <section id="experience" className="py-20 bg-slate-100 px-6">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-3xl font-bold mb-12 flex items-center gap-3">
-            <Briefcase className="text-blue-600" /> Work Experience
+            <Briefcase className="text-blue-600" /> Professional Experience
           </h3>
           <div className="grid gap-8">
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:border-blue-300 transition-all">
               <div className="flex flex-col md:flex-row md:justify-between mb-4">
                 <div>
-                  <h4 className="text-2xl font-bold">React Developer</h4>
-                  <p className="text-blue-600 font-medium">RelaxPlzz Technologies • Technopark</p>
+                  <h4 className="text-2xl font-bold text-slate-900">React Developer</h4>
+                  <p className="text-blue-600 font-medium">RelaxPlzz Technologies</p>
                 </div>
-                <span className="text-slate-500 font-medium bg-slate-50 px-3 py-1 rounded-full h-fit">Jan 2025 — Present</span>
+                <span className="text-slate-500 font-medium bg-slate-50 px-3 py-1 rounded-full h-fit">Nov 2025 — Present</span>
               </div>
               <ul className="list-disc list-inside text-slate-600 space-y-2">
-                <li>Crafting production-ready UIs using React and Tailwind CSS.</li>
-                <li>Working in high-pressure environments at Kerala's premier IT hub.</li>
-                <li>Focusing on component reusability and type-safety with TypeScript.</li>
+                <li>Developing responsive and high-end interfaces using React.js and Tailwind CSS.</li>
+                <li>Collaborating on enterprise-level web tools with a focus on component modularity.</li>
+                <li>Ensuring data integrity and smooth API integrations across the frontend.</li>
               </ul>
             </div>
 
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:border-blue-300 transition-all">
               <div className="flex flex-col md:flex-row md:justify-between mb-4">
                 <div>
-                  <h4 className="text-2xl font-bold">MERN Stack Intern</h4>
+                  <h4 className="text-2xl font-bold text-slate-900">MERN Stack Intern</h4>
                   <p className="text-blue-600 font-medium">Srishti Innovative</p>
                 </div>
-                <span className="text-slate-500 font-medium bg-slate-50 px-3 py-1 rounded-full h-fit">2025 — Present</span>
+                <span className="text-slate-500 font-medium bg-slate-50 px-3 py-1 rounded-full h-fit">Sep 2025 — Present</span>
               </div>
               <ul className="list-disc list-inside text-slate-600 space-y-2">
-                <li>Learning full-stack architecture with MongoDB, Express, and Node.js.</li>
-                <li>Implementing file uploads with Multer and secure auth with JWT.</li>
-                <li>Building data-driven applications in a collaborative environment.</li>
+                <li>Deep-diving into Full-Stack development with MongoDB, Express, and Node.js.</li>
+                <li>Implementing secure user sessions via JWT and handling file storage with Multer.</li>
+                <li>Building out RESTful services and optimizing backend query performance.</li>
               </ul>
             </div>
           </div>
@@ -160,10 +160,10 @@ anagha-s-0b8542359
       <section id="skills" className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-3xl font-bold mb-12 flex items-center gap-3">
-            <Code2 className="text-blue-600" /> Tech Stack
+            <Code2 className="text-blue-600" /> Core Tech Stack
           </h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-            {['React', 'TypeScript', 'Node.js', 'MongoDB', 'Express', 'Tailwind CSS', 'HTML', 'CSS', 'Git'].map((skill) => (
+            {['React', 'TypeScript', 'Node.js', 'MongoDB', 'Express', 'Tailwind CSS', 'HTML', 'CSS', 'Git', 'Javascript'].map((skill) => (
               <motion.div 
                 whileHover={{ scale: 1.05 }}
                 key={skill} 
@@ -180,7 +180,7 @@ anagha-s-0b8542359
       <section id="projects" className="py-20 bg-white px-6">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-3xl font-bold mb-12 flex items-center gap-3">
-            <FolderCode className="text-blue-600" /> Featured Projects
+            <FolderCode className="text-blue-600" /> Featured Work
           </h3>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -192,13 +192,13 @@ anagha-s-0b8542359
                 </div>
                 <h4 className="text-2xl font-bold mb-3">RelaxMart</h4>
                 <p className="text-slate-600 mb-6 leading-relaxed italic">
-                  Advanced E-commerce architecture built for RelaxPlzz Technologies. Features dynamic routing, inventory management, and high-performance React components.
+                  A sophisticated E-commerce solution featuring dynamic filtering, modular React components, and real-time data state management.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-8">
                   {['React', 'Tailwind', 'Axios'].map(t => <span key={t} className="px-3 py-1 bg-white border border-slate-200 rounded-md text-sm font-medium text-slate-500">{t}</span>)}
                 </div>
                 <span className="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
-                  <Briefcase size={12} /> Commercial Project
+                  <Briefcase size={12} /> Commercial Architecture
                 </span>
               </div>
             </motion.div>
@@ -211,7 +211,7 @@ anagha-s-0b8542359
                 </div>
                 <h4 className="text-2xl font-bold mb-3">MessMates</h4>
                 <p className="text-slate-600 mb-6 leading-relaxed">
-                  A production-deployed MERN application to manage shared living costs. Features JWT security, Multer for file uploads, and automated bill splitting.
+                  A full-featured MERN application for managing shared community expenses. Includes robust authentication, media uploads, and automated financial logic.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-8">
                   {['MongoDB', 'Express', 'React', 'Node.js', 'JWT'].map(t => <span key={t} className="px-3 py-1 bg-white border border-slate-200 rounded-md text-sm font-medium text-slate-500">{t}</span>)}
@@ -233,7 +233,7 @@ anagha-s-0b8542359
       {/* --- FOOTER --- */}
       <footer className="py-12 border-t border-slate-200 text-center bg-white">
         <p className="font-bold text-slate-900 mb-2">Anagha S</p>
-        <p className="text-slate-500 text-sm italic">Built with React + TypeScript + Tailwind CSS • © {new Date().getFullYear()}</p>
+        <p className="text-slate-500 text-sm italic">Crafting Digital Excellence • Built with React + TypeScript • © {new Date().getFullYear()}</p>
       </footer>
     </div>
   );
