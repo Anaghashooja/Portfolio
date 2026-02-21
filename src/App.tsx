@@ -1,6 +1,7 @@
 import { Github, Linkedin, FolderCode, Check, Copy, Mail, ExternalLink, Code2, Briefcase, Users, Terminal, ShoppingCart, Sparkles, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import profile from './assets/1000318687.jpg';
 
 const App = () => {
   const [copied, setCopied] = useState(false);
@@ -16,7 +17,7 @@ const App = () => {
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-blue-100">
       
       {/* --- NAVBAR --- */}
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-200">
+      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-200 print:hidden">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <motion.span 
             initial={{ opacity: 0 }}
@@ -40,28 +41,27 @@ const App = () => {
       </nav>
  
       {/* --- HERO SECTION --- */}
-      <section className="relative pt-32 pb-20 px-6 overflow-hidden">
-        {/* Animated Background Mesh */}
+      <section className="relative pt-32 pb-20 px-6 overflow-hidden print:pt-0">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10">
           <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-blue-100/50 blur-[120px]" />
           <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-indigo-100/50 blur-[120px]" />
         </div>
 
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="max-w-3xl"
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
           >
-           <h2 className="text-blue-600 font-semibold mb-4 flex items-center gap-2">
-  <Terminal size={20} /> Turning complex logic into elegant code.
-</h2>
-           <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-[1.1]">
-  I build <span className="text-slate-400">robust web systems.</span>
-</h1>
+            <h2 className="text-blue-600 font-semibold mb-4 flex items-center gap-2">
+              <Terminal size={20} /> Turning complex logic into elegant code.
+            </h2>
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-[1.1]">
+              I build <span className="text-slate-400">scalable web ecosystems.</span>
+            </h1>
             <p className="text-xl text-slate-600 mb-8 leading-relaxed">
               Currently a <span className="font-semibold text-slate-900">React Developer at RelaxPlzz Technologies</span> and a 
-              <span className="font-semibold text-slate-900"> MERN Stack Intern at Srishti Innovative.</span> I specialize in building robust full-stack applications with a focus on performance and type-safety.
+              <span className="font-semibold text-slate-900"> MERN Stack Intern at Srishti Innovative.</span> I specialize in architecting high-performance applications with TypeScript and the modern MERN stack.
             </p>
             
             <div className="flex flex-wrap gap-4 items-center">
@@ -77,20 +77,41 @@ const App = () => {
                   <Mail size={24} />
                 </a>
                 <span className="text-sm font-medium text-slate-500 mr-4 hidden sm:inline">{email}</span>
-                <button 
-                  onClick={copyToClipboard}
-                  className="p-2 hover:bg-slate-100 rounded-lg transition-colors relative"
-                >
+                <button onClick={copyToClipboard} className="p-2 hover:bg-slate-100 rounded-lg transition-colors relative">
                   {copied ? <Check size={18} className="text-green-500" /> : <Copy size={18} className="text-slate-400" />}
                 </button>
               </div>
             </div>
           </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative flex justify-center md:justify-end"
+          >
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-tr from-blue-600 to-indigo-600 rounded-full blur-3xl opacity-20 animate-pulse" />
+            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-[3rem] overflow-hidden border-4 border-white shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
+              <img src={profile} alt="Anagha S" className="w-full h-full object-cover" />
+            </div>
+            <motion.div 
+              initial={{ x: 20, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: 0.8 }}
+              className="absolute -bottom-4 -left-4 md:left-20 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 print:hidden"
+            >
+              <div className="bg-blue-100 p-2 rounded-lg text-blue-600"><Sparkles size={20} /></div>
+              <div>
+                <p className="text-xs font-bold text-slate-400 uppercase tracking-tighter leading-none">Status</p>
+                <p className="text-sm font-black text-slate-800 tracking-tight">Available for Work</p>
+              </div>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
       {/* --- PHILOSOPHY SECTION --- */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-6 bg-white/50">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-sm font-bold">
@@ -98,7 +119,7 @@ const App = () => {
             </div>
             <h3 className="text-3xl font-bold text-slate-800 italic">"Turning complex logic into seamless human experiences."</h3>
             <p className="text-lg text-slate-600 leading-relaxed">
-              I focus on writing clean, maintainable code that scales. Whether it's managing complex state in <strong>React</strong> or designing efficient schemas in <strong>MongoDB</strong>, my goal is always to build software that lasts.
+              I focus on writing clean, maintainable code. Whether it's managing complex state in <strong>React</strong> or designing efficient schemas in <strong>MongoDB</strong>, I build software that scales.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-4">
@@ -132,9 +153,9 @@ const App = () => {
                 <span className="text-slate-500 font-medium bg-slate-50 px-3 py-1 rounded-full h-fit">Nov 2025 — Present</span>
               </div>
               <ul className="list-disc list-inside text-slate-600 space-y-2">
-                <li>Developing responsive and high-end interfaces using React.js and Tailwind CSS.</li>
-                <li>Collaborating on enterprise-level web tools with a focus on component modularity.</li>
-                <li>Ensuring data integrity and smooth API integrations across the frontend.</li>
+                <li>Converting high-fidelity Figma designs into pixel-perfect React components.</li>
+                <li>Developing reusable UI systems using Tailwind CSS and TypeScript.</li>
+                <li>Architecting Admin Dashboards with advanced filtering and data visualization.</li>
               </ul>
             </div>
 
@@ -147,9 +168,9 @@ const App = () => {
                 <span className="text-slate-500 font-medium bg-slate-50 px-3 py-1 rounded-full h-fit">Sep 2025 — Present</span>
               </div>
               <ul className="list-disc list-inside text-slate-600 space-y-2">
-                <li>Deep-diving into Full-Stack development with MongoDB, Express, and Node.js.</li>
-                <li>Implementing secure user sessions via JWT and handling file storage with Multer.</li>
-                <li>Building out RESTful services and optimizing backend query performance.</li>
+                <li>Building full-stack features using MongoDB, Express, React, and Node.js.</li>
+                <li>Implementing secure user authentication systems via JWT.</li>
+                <li>Developed real-time communication modules using WebSockets (Socket.io).</li>
               </ul>
             </div>
           </div>
@@ -163,12 +184,8 @@ const App = () => {
             <Code2 className="text-blue-600" /> Core Tech Stack
           </h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-            {['React', 'TypeScript', 'Node.js', 'MongoDB', 'Express', 'Tailwind CSS', 'HTML', 'CSS', 'Git', 'Javascript'].map((skill) => (
-              <motion.div 
-                whileHover={{ scale: 1.05 }}
-                key={skill} 
-                className="p-6 bg-white border border-slate-200 rounded-2xl text-center font-bold text-slate-700 hover:text-blue-600 hover:border-blue-500 transition shadow-sm"
-              >
+            {['React', 'TypeScript', 'Node.js', 'MongoDB', 'Express', 'Tailwind CSS', 'HTML', 'CSS', 'Git', 'JavaScript'].map((skill) => (
+              <motion.div whileHover={{ scale: 1.05 }} key={skill} className="p-6 bg-white border border-slate-200 rounded-2xl text-center font-bold text-slate-700 hover:text-blue-600 hover:border-blue-500 transition shadow-sm">
                 {skill}
               </motion.div>
             ))}
@@ -182,55 +199,37 @@ const App = () => {
           <h3 className="text-3xl font-bold mb-12 flex items-center gap-3">
             <FolderCode className="text-blue-600" /> Featured Work
           </h3>
-
           <div className="grid md:grid-cols-2 gap-8">
-            {/* Project: RelaxMart */}
-            <motion.div whileHover={{ y: -5 }} className="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition-all">
-              <div className="p-8">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
-                  <ShoppingCart size={24} />
-                </div>
-                <h4 className="text-2xl font-bold mb-3">RelaxMart</h4>
-                <p className="text-slate-600 mb-6 leading-relaxed italic">
-                  A sophisticated E-commerce solution featuring dynamic filtering, modular React components, and real-time data state management.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-8">
-                  {['React', 'Tailwind', 'Axios'].map(t => <span key={t} className="px-3 py-1 bg-white border border-slate-200 rounded-md text-sm font-medium text-slate-500">{t}</span>)}
-                </div>
-                <span className="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
-                  <Briefcase size={12} /> Commercial Architecture
-                </span>
+            <div className="group bg-slate-50 rounded-[2.5rem] p-8 border border-slate-200 hover:shadow-xl transition-all">
+              <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
+                <ShoppingCart size={24} />
               </div>
-            </motion.div>
+              <h4 className="text-2xl font-bold mb-3">RelaxMart</h4>
+              <p className="text-slate-600 mb-6 italic">A sophisticated E-commerce solution featuring dynamic filtering and real-time state management.</p>
+              <div className="flex flex-wrap gap-2 mb-8">
+                {['React', 'Tailwind', 'Axios', 'Typescript'].map(t => <span key={t} className="px-3 py-1 bg-white border border-slate-200 rounded-md text-sm font-medium text-slate-500">{t}</span>)}
+              </div>
+              <span className="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">Commercial Architecture</span>
+            </div>
 
-            {/* Project: MessMates */}
-            <motion.div whileHover={{ y: -5 }} className="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition-all">
-              <div className="p-8">
-                <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
-                  <Users size={24} />
-                </div>
-                <h4 className="text-2xl font-bold mb-3">MessMates</h4>
-                <p className="text-slate-600 mb-6 leading-relaxed">
-                  A full-featured MERN application for managing shared community expenses. Includes robust authentication, media uploads, and automated financial logic.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-8">
-                  {['MongoDB', 'Express', 'React', 'Node.js', 'JWT'].map(t => <span key={t} className="px-3 py-1 bg-white border border-slate-200 rounded-md text-sm font-medium text-slate-500">{t}</span>)}
-                </div>
-                <div className="flex gap-6">
-                  <a href="https://github.com/Anaghashooja/Messmate.git" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm font-bold text-indigo-600 hover:text-indigo-900 transition-colors">
-                    <Github size={18} /> Source Code
-                  </a>
-                  <a href="https://messmate-22f9ad.netlify.app/" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm font-bold text-indigo-600 hover:text-indigo-900 transition-colors">
-                    <ExternalLink size={18} /> Live Demo
-                  </a>
-                </div>
+            <div className="group bg-slate-50 rounded-[2.5rem] p-8 border border-slate-200 hover:shadow-xl transition-all">
+              <div className="w-12 h-12 bg-indigo-600 rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
+                <Users size={24} />
               </div>
-            </motion.div>
+              <h4 className="text-2xl font-bold mb-3">MessMates</h4>
+              <p className="text-slate-600 mb-6">Full-featured MERN application for managing shared community expenses with JWT security.</p>
+              <div className="flex flex-wrap gap-2 mb-8">
+                {['MongoDB', 'Express', 'React', 'Node.js'].map(t => <span key={t} className="px-3 py-1 bg-white border border-slate-200 rounded-md text-sm font-medium text-slate-500">{t}</span>)}
+              </div>
+              <div className="flex gap-6">
+                <a href="https://github.com/Anaghashooja/Messmate.git" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm font-bold text-indigo-600 hover:text-indigo-900 transition-colors"><Github size={18} /> Code</a>
+                <a href="https://messmate-22f9ad.netlify.app/" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm font-bold text-indigo-600 hover:text-indigo-900 transition-colors"><ExternalLink size={18} /> Demo</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* --- FOOTER --- */}
       <footer className="py-12 border-t border-slate-200 text-center bg-white">
         <p className="font-bold text-slate-900 mb-2">Anagha S</p>
         <p className="text-slate-500 text-sm italic">Crafting Digital Excellence • Built with React + TypeScript • © {new Date().getFullYear()}</p>
